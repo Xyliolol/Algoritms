@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BenchmarkDotNet.Running;
+using System;
 
 namespace _1._1
 {
@@ -12,6 +13,7 @@ namespace _1._1
             Console.WriteLine("2 - вычисление числа Фибоначи без рекурсии");
             Console.WriteLine("3 - вычисление числа Фибоначи с рекурсией");
             Console.WriteLine("4 - Двусвязный список");
+            Console.WriteLine("5 - BenchMark");
 
             string n = Console.ReadLine();
             if (n == "1")
@@ -39,9 +41,8 @@ namespace _1._1
                 //Console.WriteLine(List.FindNode(0));
                 //List.GetCount();
                 //List.RemoveNode(1);
-                
-            }
 
+            }
         }
         
     }
