@@ -4,25 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BenchmarkDotNet;
-
-namespace _1._1
+namespace Algoritms
 {
-    class Distanse
+    public struct DDistanse
     {
-        public Distanse()
-        {
 
-        }
-        public float X { get; set; }
-        public float Y { get; set; }
-        public Distanse(float x, float y)
+        public double X { get; set; }
+        public double Y { get; set; }
+        public DDistanse(double x, double y)
         {
             X = x;
             Y = y;
         }
-        public void DistanseFloat()
+
+        public void DistanseDouble()
         {
-            Console.WriteLine("                 тест 1");
+            Console.WriteLine("                 тест 3");
             int o = 20;
             int j = 20;
             double[] array = new double[o];
