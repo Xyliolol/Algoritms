@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static _1._1.DoubleList;
+using static Algoritms.DoubleList;
 
-namespace _1._1
+namespace Algoritms
 {
     class WILinkedList : ILinkedList
     {
         private Node head;
         private Node tail;
 
-        public int Length { get; set;}
-       
+        public int Length { get; set; }
+
         public void AddNode(int value)
         {
             Node newNode = new Node { Value = 2 };
@@ -92,7 +92,7 @@ namespace _1._1
             else
             {
                 throw new ArgumentException("Узла с таким индексом нет в списке.", nameof(index));
-               
+
             }
         }
         public void RemoveNode(Node node)

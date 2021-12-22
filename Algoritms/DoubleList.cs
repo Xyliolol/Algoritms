@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _1._1
+namespace Algoritms
 {
     class DoubleList
     {
-       
-          public class Node
+
+        public class Node
         {
             public int Value { get; set; }
             public Node NextNode { get; set; }
@@ -27,9 +27,8 @@ namespace _1._1
             Node FindNode(int searchValue); // ищет элемент по его значению
         }
     }
-      
-     
-   
+
+
+
 
 }
-
