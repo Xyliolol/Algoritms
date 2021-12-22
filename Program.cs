@@ -1,5 +1,7 @@
 ﻿using BenchmarkDotNet.Running;
+using Microsoft.TeamFoundation.Common.Internal;
 using System;
+
 
 namespace _1._1
 {
@@ -14,7 +16,6 @@ namespace _1._1
             Console.WriteLine("3 - вычисление числа Фибоначи с рекурсией");
             Console.WriteLine("4 - Двусвязный список");
             Console.WriteLine("5 - BenchMark");
-
             string n = Console.ReadLine();
             if (n == "1")
             {
@@ -43,7 +44,35 @@ namespace _1._1
                 //List.RemoveNode(1);
 
             }
-        }
+            else if (n == "5")
+            {
+                OUT viv = new OUT();
+                viv.output();
+                BenchmarkRunner.Run<BenchMark>();
+            }
+            else if (n == "6")
+            {
+
+
+                var tree = new BinaryTree();
+               
+                tree.Insert(11);
+                tree.Insert(20);
+                tree.Insert(40);
+                tree.Insert(10);
+                tree.Insert(30);
+                tree.Insert(80);
+                tree.Insert(29);
+                tree.Insert(31);
+                tree.Insert(32);
+                tree.Insert(70);
+                BinaryTreeExtensions.Print(tree);
+                tree.Remove(40);
+                BinaryTreeExtensions.Print(tree);
+                tree.Remove(20);
+                BinaryTreeExtensions.Print(tree);
+            }
+            }
         
     }
 }
