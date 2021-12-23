@@ -234,4 +234,81 @@ namespace Algoritms
             }
         }
     }
+    public class SearchDFS
+    {
+        private int V;
+        private List<int>[] move;
+        public SearchDFS(int v)
+        {
+            V = v;
+            move = new List<int>[v];
+            for (int i = 0; i < v; i++)
+                move[i] = new List<int>();
+        }
+        public void Add(int v, int w)
+        {
+            move[v].Add(w);
+        }
+        public void DFS(int v, bool[] visited)
+        {
+            visited[v] = true;
+            Console.Write(v + " ");
+            List<int> vList = move[v];
+            foreach (var n in vList)
+            {
+                if (!visited[n])
+                {
+                    DFS(n, visited);
+                }
+            }
+        }
+        public void DFSSer(int v)
+        {
+            bool[] visited = new bool[V];
+            DFS(v, visited);
+        }
+
+    }
+    public class SearchBFS
+    {
+        private int _V;
+        private LinkedList<int>[] _move;
+        public SearchBFS(int v)
+        {
+            _V = v;
+            _move = new LinkedList<int>[v];
+            for (int i = 0; i < v; i++)
+                _move[i] = new LinkedList<int>();
+        }
+        public void Add(int v, int w)
+        {
+            _move[v].AddLast(w);
+        }
+        public void BFS(int n)
+        {
+            bool[] visited = new bool[_V];
+            for (int i = 0; i < _V; i++)
+            {
+                visited[i] = false;
+            }
+            LinkedList<int> queue = new LinkedList<int>();
+            visited[n] = true;
+            queue.AddLast(n);
+            while (queue.Any())
+            {
+                n = queue.First();
+                Console.Write(n + " ");
+                queue.RemoveFirst();
+                LinkedList<int> list = _move[n];
+                foreach (var val in list)
+                {
+                    if (!visited[val])
+                    {
+                        visited[val] = true;
+                        queue.AddLast(val);
+                    }
+                }
+            }
+        }
+    }
 }
