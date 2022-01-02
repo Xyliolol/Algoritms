@@ -17,6 +17,7 @@ namespace Algoritms
             Console.WriteLine("4 - Двусвязный список");
             Console.WriteLine("5 - BenchMark");
             Console.WriteLine("6 - двоичное дерево");
+            Console.WriteLine("7 - шахматная доска");
             string n = Console.ReadLine();
             if (n == "1")
             {
@@ -94,6 +95,11 @@ namespace Algoritms
                 sear.Add(3, 4);
                 Console.WriteLine("\nпоиск в ширину\t");
                 sear.BFS(2);
+            }
+            else if (n == "7" )
+            {
+                var _Chess = new Chess();
+                _Chess.Start();
             }
         }
 
